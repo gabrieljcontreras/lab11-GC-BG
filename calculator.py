@@ -1,9 +1,9 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+import math
+def add(a, b):
+    add = a + b
+    return add
 
-One function per operation, in order.
-"""
+
 # First example
 import math
 def square_root(a):
@@ -24,12 +24,6 @@ def subtract(a, b):
 def multiply(a, b):
     return a * b
 
-def divide(a, b):
-    try:
-        result = b / a
-        return result
-    except ZeroDivisionError: # raise ZeroDivisionError if a == 0
-        print("Division by zero not allowed")
 def logarithm(a, b):
     try:
         result = math.log(a, b)
@@ -41,4 +35,24 @@ def exponent(a, b):
     return a**b
 
 
+def mul(a, b):
+    mul = a * b
+    return mul
 
+def div(a, b):
+    try:
+        div = a / b
+        return div
+    except ZeroDivisionError:
+        print("Error: cannot divide by zero")
+
+def log(a, b):
+    try:
+        logarithm = log(a,b)
+        return logarithm
+    except ValueError:
+        print("Error: value error")
+
+def exp(a, b):
+    exp = a**b
+    return exp
