@@ -7,11 +7,9 @@ def add(a, b):
 # First example
 import math
 def square_root(a):
-    try:
-        result = math.sqrt(a)
-        return result
-    except ValueError:
-        print("Cannot have the square root of a negative number")
+    if a < 0:
+        raise ValueError("Cannot have the square root of a negative number")
+    return math.sqrt(a)
 def hypotenuse(a,b):
     result = math.hypot(a,b)
     return result
@@ -25,11 +23,9 @@ def multiply(a, b):
     return a * b
 
 def logarithm(a, b):
-    try:
-        result = math.log(a, b)
-        return result
-    except ValueError:
-        print("Value Error")# use math library/raise ValueError
+    if a <= 0:
+        raise ValueError("Value Error")
+    return math.log(a, b)
 
 def exponent(a, b):
     return a**b
