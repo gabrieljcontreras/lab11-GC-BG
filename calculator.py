@@ -3,9 +3,29 @@ def add(a, b):
     add = a + b
     return add
 
-def sub(a, b):
-    sub = a - b
-    return sub
+
+# First example
+import math
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def logarithm(a, b):
+    try:
+        result = math.log(a, b)
+        return result
+    except ValueError:
+        print("Value Error")# use math library/raise ValueError
+
+def exponent(a, b):
+    return a**b
+
 
 def mul(a, b):
     mul = a * b
