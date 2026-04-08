@@ -1,11 +1,30 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+import math
+def add(a, b):
+    add = a + b
+    return add
 
-One function per operation, in order.
-"""
-# First example
-def add(a, b): 
-    pass
+def sub(a, b):
+    sub = a - b
+    return sub
 
+def mul(a, b):
+    mul = a * b
+    return mul
 
+def div(a, b):
+    try:
+        div = a / b
+        return div
+    except ZeroDivisionError:
+        print("Error: cannot divide by zero")
+
+def log(a, b):
+    try:
+        logarithm = log(a,b)
+        return logarithm
+    except ValueError:
+        print("Error: value error")
+
+def exp(a, b):
+    exp = a**b
+    return exp
