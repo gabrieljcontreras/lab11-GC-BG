@@ -42,8 +42,8 @@ class TestCalculator(unittest.TestCase):
         # call log function inside, example:
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
-        self.assertRaises(ValueError,logarithm(0,5))
-
+        with self.assertRaises(ValueError):
+             logarithm(0, 5)
     def test_hypotenuse(self): # 3 assertions
         assert hypotenuse(3, 4) == 5
         assert hypotenuse(5, 12) == 13
@@ -54,9 +54,12 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #    square_root(NUM)
         # Test basic function
-        self.assertRaises(ValueError, square_root(-10))
-        self.assertRaises(ValueError, square_root(-5))
-        self.assertRaises(ValueError, square_root(-2))
+        with self.assertRaises(ValueError):
+            square_root(-10)
+        with self.assertRaises(ValueError):
+            square_root(-5)
+        with self.assertRaises(ValueError):
+            square_root(-2)
         ##########################
 
 # Do not touch this
